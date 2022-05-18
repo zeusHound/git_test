@@ -1,0 +1,207 @@
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ git --version
+git version 2.36.1
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ git config --global init.defaultBranch main
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ cd
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ pwd
+/home/griffin
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ cd~
+Command 'cd~' not found, did you mean:
+  command 'cd5' from deb cd5 (0.1-4)
+  command 'cdp' from deb irpas (0.10-9)
+  command 'cdw' from deb cdw (0.8.1-2)
+  command 'cde' from deb cde (0.1+git9-g551e54d-1.2)
+  command 'cdo' from deb cdo (2.0.4-1)
+  command 'cdi' from deb cdo (2.0.4-1)
+  command 'cdb' from deb tinycdb (0.78build3)
+Try: sudo apt install <deb name>
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ cd ~
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ pwd
+/home/griffin
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ mkdir repos
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ git clone git@github.com:zeusHound/git_test.git
+Cloning into 'git_test'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ ls
+Desktop    Downloads  Music     Public  snap       test
+Documents  git_test   Pictures  repos   Templates  Videos
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ cd git_test
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/git_test$ ls
+README.md
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/git_test$ mv git_test repos
+mv: cannot stat 'git_test': No such file or directory
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/git_test$ mv git_test Desktop
+mv: cannot stat 'git_test': No such file or directory
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/git_test$ mv git_test Home
+mv: cannot stat 'git_test': No such file or directory
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/git_test$ cp git_test repos
+cp: cannot stat 'git_test': No such file or directory
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/git_test$ mv home/git_test home/repos
+mv: cannot stat 'home/git_test': No such file or directory
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/git_test$ mv griffin/home/git_test griffin/home/repos
+mv: cannot stat 'griffin/home/git_test': No such file or directory
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/git_test$ ls
+README.md
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/git_test$ pwd
+/home/griffin/git_test
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/git_test$ cd..
+cd..: command not found
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/git_test$ cd ..
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ pwd
+/home/griffin
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ mv git_test repos
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ pwd
+/home/griffin
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ ls
+Desktop    Downloads  Pictures  repos  Templates  Videos
+Documents  Music      Public    snap   test
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~$ cd repos
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos$ ls
+git_test
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos$ cd git_test
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ ls
+README.md
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git remote -v
+origin	git@github.com:zeusHound/git_test.git (fetch)
+origin	git@github.com:zeusHound/git_test.git (push)
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ man ls
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ touch hello.world.txt
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ ls
+hello.world.txt  README.md
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	hello.world.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git add hellow.world.txt
+fatal: pathspec 'hellow.world.txt' did not match any files
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git add hello.world.txt
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   hello.world.txt
+
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git commit -m "add hello.world.txt"
+[main a1ab66d] add hello.world.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello.world.txt
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git log
+commit a1ab66d72ea82e65c8aebee5d00a3673a072735c (HEAD -> main)
+Author: Griffin Kelly <griffink13@gmail.com>
+Date:   Tue May 17 19:18:00 2022 -0700
+
+    add hello.world.txt
+
+commit d4161f6d501874314336e95371d97395a5ddf295 (origin/main, origin/HEAD)
+Author: zeusHound <105580987+zeusHound@users.noreply.github.com>
+Date:   Tue May 17 19:03:35 2022 -0700
+
+    Initial commit
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ code .
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git add readme.md
+fatal: pathspec 'readme.md' did not match any files
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git add README.md
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   hello.world.txt
+
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git add hello.world.txt
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+	modified:   hello.world.txt
+
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ man ls
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ 
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git commit -m "Edit README.md and hello.world.txt"
+[main 4215355] Edit README.md and hello.world.txt
+ 2 files changed, 4 insertions(+)
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git log
+commit 4215355a15391e8eaf0f150439bed72099746d64 (HEAD -> main)
+Author: Griffin Kelly <griffink13@gmail.com>
+Date:   Tue May 17 19:28:53 2022 -0700
+
+    Edit README.md and hello.world.txt
+
+commit a1ab66d72ea82e65c8aebee5d00a3673a072735c
+Author: Griffin Kelly <griffink13@gmail.com>
+Date:   Tue May 17 19:18:00 2022 -0700
+
+    add hello.world.txt
+
+commit d4161f6d501874314336e95371d97395a5ddf295 (origin/main, origin/HEAD)
+Author: zeusHound <105580987+zeusHound@users.noreply.github.com>
+Date:   Tue May 17 19:03:35 2022 -0700
+
+    Initial commit
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git push origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 639 bytes | 639.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:zeusHound/git_test.git
+   d4161f6..4215355  main -> main
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+griffin@griffin-HP-Pavilion-x360-Convertible-11-ap0xxx:~/repos/git_test$ 
